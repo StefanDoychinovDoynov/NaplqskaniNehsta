@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 html {
@@ -8,7 +8,6 @@ html {
 body {
     padding: 0;
     margin: 0;
-
 }
 
 .lander {
@@ -26,7 +25,8 @@ body {
 .hed2 {
     background-color: #80abc5;
     width: 100vw;
-    height: 100vh;
+    height: auto; /* Use auto to allow it to grow with content */
+    min-height: 100vh; /* Set minimum height to ensure it's tall enough */
 }
 
 .hed3 {
@@ -34,7 +34,6 @@ body {
     width: 100vw;
     height: 100vh;
 }
-
 
 #title {
     position: absolute;
@@ -48,7 +47,6 @@ body {
     text-decoration: none;
 }
 
-
 header {
     position: fixed;
     top: 0;
@@ -56,7 +54,6 @@ header {
     height: 11vh;
     background: transparent;
     backdrop-filter: blur(10px);
- 
 }
 
 .butns {
@@ -74,47 +71,37 @@ header {
     font-weight: 300;
     font-style: normal;
     color: #1f1f1f;
-    font-size: 2.5vh
+    font-size: 2.5vh;
 }
 
 .butns a::after {
     content: '';
-    /* No text, just a line */
     position: absolute;
     width: 0;
-    /* Initially hidden (0 width) */
     height: 0.15vh;
-    /* Thickness of the underline */
     bottom: -5px;
-    /* Position the underline just below the text */
     left: 0;
-    /* Start from the left */
     background-color: #1f1f1f;
-    /* Underline color */
     transition: width 0.3s ease;
-    /* Smooth transition of width */
 }
 
-/* Hover effect to animate the underline */
 .butns a:hover::after {
     width: 100%;
-    /* On hover, expand the underline to full width */
 }
 
-#mf{
+#mf {
     width: 30vw;
     margin-left: 15vw;
     margin-top: 50vh;
 }
 
-#tf{
+#tf {
     float: right;
     margin-top: 22vh;
     width: 30vw;
-   
 }
 
-#sum1{
+#sum1 {
     float: right;
     margin-top: 15vh;
     margin-right: 40vw;
@@ -123,11 +110,9 @@ header {
     font-style: normal;
     color: #1f1f1f;
     font-size: 4vh;
-    
 }
 
-#txt1{
- 
+#txt1 {
     float: right;
     margin-top: 25vh;
     margin-right: -40vw;
@@ -140,7 +125,7 @@ header {
     text-align: justify;
 }
 
-#ext1{
+#ext1 {
     float: right;
     margin-top: 50vh;
     margin-right: 7vw;
@@ -153,15 +138,14 @@ header {
     text-align: justify;
 }
 
-#kj{
+#kj {
     float: right;
     margin-top: 10vh;
     width: 35vw;
     margin-right: 4vw;
 }
 
-
-#sum2{
+#sum2 {
     float: left;
     margin-top: 16vh;
     margin-left: 10vw;
@@ -172,7 +156,7 @@ header {
     font-size: 4vh;
 }
 
-#txt2{
+#txt2 {
     float: left;
     margin-left: 10vw;
     margin-top: 2vh;
@@ -185,8 +169,7 @@ header {
     text-align: justify;
 }
 
-#ext2{
-    
+#ext2 {
     float: left;
     margin-left: 10vw;
     margin-top: 4vh;
@@ -197,14 +180,15 @@ header {
     font-size: 3vh;
 }
 
-#ruze{
+#ruze {
     position: absolute;
     left: 0;
-    margin-top: 80vh;
+    margin-left: 4vw;
+    margin-top: 83vh;
     width: 28vw;
 }
 
-#sum3{
+#sum3 {
     float: right;
     margin-top: 16vh;
     margin-right: 10vw;
@@ -215,8 +199,7 @@ header {
     font-size: 4vh;
 }
 
-
-#txt3{
+#txt3 {
     float: right;
     margin-right: -7vw;
     margin-top: 25vh;
@@ -229,9 +212,7 @@ header {
     text-align: justify;
 }
 
-
-
-#ext3{
+#ext3 {
     float: right;
     margin-right: -36vw;
     margin-top: 70vh;
@@ -244,14 +225,79 @@ header {
     text-align: justify;
 }
 
-#uzunova{
+#uzunova {
     width: 20vw;
     margin-left: 23vw;
     margin-top: 40vh;
 }
 
-
+/* Media Query for Phone Screens */
 @media (max-width: 768px) {
+    /* Header adjustments for mobile */
+    header {
+        height: 9vh;
+    }
 
+    #title {
+        font-size: 4vh;
+        margin-left: 2vw;
+    }
 
+    .butns {
+        margin-right: 2vw;
+        gap: 1.2vw;
+        margin-top: 4vh;
+    }
+
+    .butns a {
+        font-size: 2vh;
+    }
+
+    /* Stack elements vertically and adjust for mobile */
+    #mf,
+    #tf,
+    #kj,
+    #ruze,
+    #uzunova {
+        width: 80vw;
+        margin-left: 10vw;
+        margin-top: 2vh;
+    }
+
+    #sum1,
+    #sum2,
+    #sum3 {
+        font-size: 3vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 10vh;
+    }
+
+    #txt1,
+    #txt2,
+    #txt3,
+    #ext1,
+    #ext2,
+    #ext3 {
+        font-size: 2.5vh;
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 2vh;
+    }
+
+    .lander,
+    .hed1,
+    .hed2,
+    .hed3 {
+        width: 100vw;
+        height: auto; /* Use auto for all sections */
+        padding-bottom: 5vh;
+    }
+
+    /* Make sure hed2 has enough height */
+    .hed2 {
+        min-height: 120vh; /* Ensure this section is tall enough */
+        padding-bottom: 20vh; /* Additional space to push content down */
+    }
 }
